@@ -29,3 +29,7 @@ COPY conf/php/www.conf /etc/php7/php-fpm.d/www.conf
 COPY conf/nginx/default.conf /default.conf
 
 COPY supervisor/ /etc/supervisor/conf.d/
+
+WORKDIR /var/www
+
+VOLUME ["/var/www"]
